@@ -1,0 +1,7 @@
+clusters:
+- name: kube
+  destinationServer: https://kubernetes.default.svc
+  apps:
+    prometheus:
+      enabled: true
+      version: "2.0.0"
