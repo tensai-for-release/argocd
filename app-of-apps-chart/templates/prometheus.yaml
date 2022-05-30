@@ -3,7 +3,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{printf "%s-%s" .name "monitor"}}
+  name: {{printf "%s-%s" .name "monitors"}}
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
