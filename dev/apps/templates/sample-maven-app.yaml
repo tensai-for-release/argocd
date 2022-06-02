@@ -1,0 +1,15 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sample-maven-app
+  namespace: sample-maven-app
+spec:
+  destination:
+    namespace: sample-maven-app
+    server: https://argotestaks-dns-885ac337.hcp.eastus.azmk8s.io:443
+  additionalData:
+    deploymentName: sample-maven-app
+    namespace: sample-maven-app
+    serviceEnabled: true
+    serviceType: LoadBalancer
+    servicePort: 8080
