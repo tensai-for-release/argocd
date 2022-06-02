@@ -21,7 +21,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/hegdeshashi/argocd-demo.git
+        repoURL: https://github.com/tensai-for-release/argocd.git
         targetRevision: HEAD
         path: applicationsets
         helm:
