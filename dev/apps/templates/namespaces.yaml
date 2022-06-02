@@ -8,6 +8,6 @@ metadata:
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: helm-hooks
+  name: sample-maven-app
   annotations:
     argocd.argoproj.io/sync-wave: "-1"    
