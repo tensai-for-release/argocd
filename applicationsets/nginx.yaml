@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
   name: try-nginx
-  namespace: argocd
+  namespace: my-argocd
 spec:
   destination:
     namespace: default
