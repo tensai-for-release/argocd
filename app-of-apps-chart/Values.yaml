@@ -5,9 +5,4 @@ clusters:
     prometheus:
       enabled: true
       version: "2.1.0"
-- name: azure      
-  destinationServer: https://aks197-dns-507c5200.hcp.centralus.azmk8s.io
-  apps:
-    prometheus:
-      enabled: true
-      version: "3.1.0"    
+
