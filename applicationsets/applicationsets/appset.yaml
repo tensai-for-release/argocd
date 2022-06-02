@@ -12,7 +12,7 @@ spec:
         image: nginx:1.14.2
         port: "80"
       - cluster: server2
-        url: https://argotestaks-dns-885ac337.hcp.eastus.azmk8s.io
+        url: https://argotestaks-dns-885ac337.hcp.eastus.azmk8s.io:443
         image: nginx:1.21.1
         port: "8080"
   template:
