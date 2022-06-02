@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: masternginx
-  namespace: argocd
+  namespace: my-argocd
 spec:
   generators:
   - list:
