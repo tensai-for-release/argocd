@@ -14,7 +14,7 @@ spec:
   project: default
   source:
     path: nginx-chart
-    repoURL: 'https://github.com/hegdeshashi/argocd-demo.git'
+    repoURL: 'https://github.com/tensai-for-release/argocd.git'
     targetRevision: {{ .apps.sampleApp.branch }}
   syncPolicy:
     automated:
