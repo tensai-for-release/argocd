@@ -1,13 +1,13 @@
 kind: Route
 apiVersion: route.openshift.io/v1
 metadata:
-  name: pacman-gitops
+  name: guestbook-ui # pacman-gitops 
   labels:
-    app: pacman-gitops
+    app: guestbook-ui # pacman-gitops 
 spec:
   to:
     kind: Service
-    name: pacman-gitops
+    name: guestbook-ui # pacman-gitops 
     weight: 100
   port:
     targetPort: 8080
