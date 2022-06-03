@@ -1,10 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: helm-guestbook
+  name: tensai
   namespace: argocd
-  labels:
-    name: dev
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
