@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pacman-gitops # guestbook-ui
+  name: guestbook-ui # pacman-gitops 
 spec:
   replicas: 1
   revisionHistoryLimit: 3
   selector:
     matchLabels:
-      app: pacman-gitops # guestbook-ui
+      app: guestbook-ui # pacman-gitops 
   template:
     metadata:
       labels:
-        app: pacman-gitops # guestbook-ui
+        app: guestbook-ui # pacman-gitops 
     spec:
       containers:
-      - image: quay.io/redhat-scholars/pacman-kikd:1.0.0 # nginxinc/nginx-unprivileged:latest
-        name: pacman-gitops # guestbook-ui
+      - image: nginxinc/nginx-unprivileged:latest # quay.io/redhat-scholars/pacman-kikd:1.0.0 
+        name: guestbook-ui # pacman-gitops 
         imagePullPolicy: Always
         resources:
           requests:
