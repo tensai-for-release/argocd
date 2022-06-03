@@ -16,9 +16,9 @@ spec:
    spec:
      project: default
      source:
-       repoURL: https://github.com/dewandemo/applicationset.git
+       repoURL: https://github.com/tensai-for-release/argocd.git
        targetRevision: HEAD
-       path: examples/list-generator/guestbook/{{cluster}}
+       path: appsets/list-generator/guestbook/{{cluster}}
      destination:
        server: '{{url}}'
        namespace: guestbook-ns
