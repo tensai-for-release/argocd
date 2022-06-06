@@ -33,6 +33,9 @@ spec:
 #            value: '{{port}}'  
       destination:
         server: '{{url}}'
+        path: src/main/webapp/
+        repoURL: https://github.com/unique-tensai/sample-mavenapp2.git
+        targetRevision: HEAD
  #       namespace: argocd
         deploymentName: sample-app
         namespace: sample-app
