@@ -17,13 +17,13 @@ spec:
         port: "8080"
   template:
     metadata:
-      name: '{{cluster}}-appsets'
+      name: '{{cluster}}-env'
     spec:
       project: default
       source:
         repoURL: https://github.com/tensai-for-release/argocd.git
         targetRevision: HEAD
-        path: applicationsets
+        path: applicationsets/appsets
         helm:
           releaseName: '{{image}}-nginx'
           parameters:
