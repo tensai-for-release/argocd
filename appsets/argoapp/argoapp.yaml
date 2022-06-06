@@ -1,24 +1,24 @@
-# This is an example of a typical ApplicationSet which uses the cluster generator.
-# An ApplicationSet is comprised with two stanzas:
-#  - spec.generator - producer of a list of values supplied as arguments to an app template
-#  - spec.template - an application template, which has been parameterized
 apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: guestbook
 spec:
   generators:
-  - clusters: {} # This is a generator, specifically, a cluster generator.
-  template: 
-    # This is a template Argo CD Application, but with support for parameter substitution.
+  - list:
+      elements:
+      - cluster: engineering-dev
+        url: https://kubernetes.default.svc
+      - cluster: engineering-prod
+        url: https://kubernetes.default.svc
+  template:
     metadata:
-      name: '{{name}}-guestbook'
+      name: '{{cluster}}-guestbook'
     spec:
-      project: "default"
+      project: default
       source:
-        repoURL: https://github.com/tensa-for-release/argocd
+        repoURL: https://github.com/argoproj/applicationset.git
         targetRevision: HEAD
-        path: guestbook
+        path: examples/list-generator/guestbook/{{cluster}}
       destination:
-        server: '{{server}}'
+        server: '{{url}}'
         namespace: guestbook
