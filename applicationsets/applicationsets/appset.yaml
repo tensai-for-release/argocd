@@ -33,6 +33,6 @@ spec:
             value: '{{port}}'  
       destination:
         server: '{{url}}'
-        namespace: default
+        namespace: argocd
       syncPolicy:
         automated: {}
