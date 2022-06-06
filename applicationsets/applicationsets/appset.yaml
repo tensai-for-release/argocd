@@ -9,12 +9,12 @@ spec:
       elements:
       - cluster: dev
         url: https://kubernetes.default.svc
-        image: nginx:1.14.2
-        port: "80"
+#        image: nginx:1.14.2
+#        port: "80"
       - cluster: prod
         url: https://aks197-dns-507c5200.hcp.centralus.azmk8s.io:443
-        image: nginx:1.21.1
-        port: "8080"
+#        image: nginx:1.21.1
+#        port: "8080"
   template:
     metadata:
       name: '{{cluster}}-appsets'
@@ -34,8 +34,8 @@ spec:
       destination:
         server: '{{url}}'
  #       namespace: argocd
-        deploymentName: sample-maven-app
-        namespace: sample-maven-app
+        deploymentName: sample-app
+        namespace: sample-app
         serviceEnabled: true
         serviceType: LoadBalancer
         servicePort: 8080
