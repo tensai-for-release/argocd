@@ -18,7 +18,7 @@ spec:
      source:
        repoURL: https://github.com/tensai-for-release/argocd.git
        targetRevision: HEAD
-       path: appsets/list-generator/guestbook/{{cluster}}
+       path: argocd/appsets/list-generator/guestbook/{{cluster}}
      destination:
        server: '{{url}}'
        namespace: guestbook-ns
