@@ -17,7 +17,7 @@ spec:
         port: "8080"
   template:
     metadata:
-      name: '{{cluster}}-appsets'
+      name: '{{cluster}}-tensai'
     spec:
       project: default
       source:
