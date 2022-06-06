@@ -11,10 +11,26 @@ spec:
         url: https://kubernetes.default.svc
 #        image: nginx:1.14.2
 #        port: "80"
+        image:
+          repoURL: https://github.com/unique-tensai/sample-mavenapp2.git
+          path: src/main/webapp
+          deploymentName: sample-app
+          namespace: sample-app
+          serviceEnabled: true
+          serviceType: LoadBalancer
+          servicePort: 8080
       - cluster: prod
         url: https://aks197-dns-507c5200.hcp.centralus.azmk8s.io:443
 #        image: nginx:1.21.1
 #        port: "8080"
+        image:
+          repoURL: https://github.com/unique-tensai/sample-mavenapp2.git
+          path: src/main/webapp
+          deploymentName: sample-app
+          namespace: sample-app
+          serviceEnabled: true
+          serviceType: LoadBalancer
+          servicePort: 8080
   template:
     metadata:
       name: '{{cluster}}-appsets'
@@ -33,14 +49,6 @@ spec:
 #            value: '{{port}}'  
       destination:
         server: '{{url}}'
-        path: src/main/webapp/
-        repoURL: https://github.com/unique-tensai/sample-mavenapp2.git
-        targetRevision: HEAD
  #       namespace: argocd
-        deploymentName: sample-app
-        namespace: sample-app
-        serviceEnabled: true
-        serviceType: LoadBalancer
-        servicePort: 8080
       syncPolicy:
         automated: {}
