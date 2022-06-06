@@ -16,7 +16,7 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://github.com/argoproj/applicationset.git
+        repoURL: https://github.com/tensai-for-release/argocd.git
         targetRevision: HEAD
         path: examples/list-generator/guestbook/{{cluster}}
       destination:
