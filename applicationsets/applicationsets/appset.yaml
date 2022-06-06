@@ -39,7 +39,7 @@ spec:
       source:
         repoURL: https://github.com/tensai-for-release/argocd.git
         targetRevision: HEAD
-        path: applicationsets
+        path: applicationsets/applicationsets
 #        helm:
 #          releaseName: '{{image}}-nginx'
 #          parameters:
