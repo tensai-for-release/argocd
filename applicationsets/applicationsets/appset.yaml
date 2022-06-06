@@ -33,6 +33,11 @@ spec:
             value: '{{port}}'  
       destination:
         server: '{{url}}'
-        namespace: argocd
+ #       namespace: argocd
+        deploymentName: sample-maven-app
+        namespace: sample-maven-app
+        serviceEnabled: true
+        serviceType: LoadBalancer
+        servicePort: 8080
       syncPolicy:
         automated: {}
