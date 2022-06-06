@@ -24,13 +24,13 @@ spec:
         repoURL: https://github.com/tensai-for-release/argocd.git
         targetRevision: HEAD
         path: applicationsets
-        helm:
-          releaseName: '{{image}}-nginx'
-          parameters:
-          - name: image
-            value: '{{image}}'
-          - name: port
-            value: '{{port}}'  
+#        helm:
+#          releaseName: '{{image}}-nginx'
+#          parameters:
+#          - name: image
+#            value: '{{image}}'
+#          - name: port
+#            value: '{{port}}'  
       destination:
         server: '{{url}}'
  #       namespace: argocd
