@@ -15,6 +15,10 @@ spec:
         url: https://aks197-dns-507c5200.hcp.centralus.azmk8s.io:443
         image: nginx:1.21.1
         port: "8080"
+      - cluster: tensai-stage
+        url: https://tensai-dev-dns-ae4b433d.hcp.southindia.azmk8s.io:443
+        image: nginx:1.21.1
+        port: "8080"
   template:
     metadata:
       name: '{{cluster}}-environment'
