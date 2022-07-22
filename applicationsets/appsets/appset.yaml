@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: ApplicationSet
 metadata:
   name: tensai
-  namespace: argocd
+  namespace: sample-react-argocd
 spec:
   generators:
   - list:
@@ -33,6 +33,6 @@ spec:
             value: '{{port}}'  
       destination:
         server: '{{url}}'
-        namespace: argocd
+        namespace: sample-react-argocd
       syncPolicy:
         automated: {}
