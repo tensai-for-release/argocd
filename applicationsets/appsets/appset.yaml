@@ -11,10 +11,6 @@ spec:
         url: https://kubernetes.default.svc
         image: nginx:1.14.2
         port: "80"
-      - cluster: tensai-prod
-        url: https://argotestaks-dns-885ac337.hcp.eastus.azmk8s.io:443
-        image: nginx:1.21.1
-        port: "8080"
       - cluster: tensai-qa
         url: https://agitily-devops-dev-dns-0da54200.hcp.eastus.azmk8s.io:443
         image: nginx:1.21.1
