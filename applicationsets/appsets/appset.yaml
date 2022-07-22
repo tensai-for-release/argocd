@@ -16,12 +16,12 @@ spec:
         image: nginx:1.21.1
         port: "8080"
       - cluster: tensai-qa
-        url: https://tensai-dev-dns-ae4b433d.hcp.southindia.azmk8s.io:443
+        url: https://agitily-devops-dev-dns-0da54200.hcp.eastus.azmk8s.io:443
         image: nginx:1.21.1
         port: "8080"
   template:
     metadata:
-      name: '{{cluster}}-environment'
+      name: '{{cluster}}-react'
     spec:
       project: default
       source:
